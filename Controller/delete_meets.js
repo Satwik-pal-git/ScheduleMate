@@ -5,7 +5,6 @@ const router2 = require("express").Router();
 module.exports = async (req, res, next) => {
     const docs = await Meeting_model.find({});
 
-    // console.log("this is: ", docs);
     for (var i = 0; i < docs.length; i++) {
         var string_end_time = docs[i].End_time + ":00";
         var string_date = docs[i].Date;
