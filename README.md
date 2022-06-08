@@ -7,7 +7,7 @@ https://schedule--system.herokuapp.com/
   username: person@gmail.com   <br />
   password: personpassword <br />
 <br />
-<h2>Mongo URI:</h2> <br /> mongodb+srv://task_growthpal:MzchtM1QQkRcsmFB@cluster0.lw2jp.mongodb.net/?retryWrites=true&w=majority
+<h2>Mongo URI:</h2> mongodb+srv://task_growthpal:MzchtM1QQkRcsmFB@cluster0.lw2jp.mongodb.net/?retryWrites=true&w=majority
 
  <br/> <br/>
  
