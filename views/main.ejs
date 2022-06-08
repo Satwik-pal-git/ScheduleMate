@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Schedule</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topbar">
+            <p>
+            <h2>Schedule Management Systems</h2>
+            </p>
+        </div>
+        <br>
+        <div class="content_box">
+            <button class="schedule_meeting" id="schedule_meeting">Schedule a meeting</button>
+            <div class="meetingform" style="display: none;">
+                <form action="/schedule" method="post">
+                    <label for="">Date:</label>
+                    <input type="date" name="date" id="" required> <br>
+                    <div class="time">
+                        <div class="labels">
+                            <label for="" class="Alabel">Start time:</label>
+                            <label for="" class="Alabel">End time:</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="time" class="Alabel" name="startime" id="time_in" required>
+                            <input type="time" class="Alabel input2" name="endtime" id="time_in" required>
+                        </div>
+                    </div>
+                    <br>
+                    <label for="">Roome Id:</label>
+                    <select name="Room_ID" id="" required>
+                        <option value="" disabled hidden selected>-- Select --</option>
+                        <option value="1">R1</option>
+                        <option value="2">R2</option>
+                        <option value="3">R3</option>
+                        <option value="4">R4</option>
+                        <option value="5">R5</option>
+                    </select> <br>
+                    <!-- <label for="">Person/Persons:</label>
+                    <input type="text" name="person" id=""> -->
+
+                    <div class="joiner">
+                        <div class="labels">
+                            <label for="" class="Alabel">For person:</label>
+                            <label for="" class="Alabel">Attendee:</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="Alabel" name="host" id="time_in" required>
+                            <input type="text" class="Alabel input2" name="attendee" id="time_in">
+                        </div>
+                    </div>
+                    <button type="submit" class="schedule">Schedule</button>
+                </form>
+            </div>
+            <div class="activities">
+                <%if(meetings.length==0){%>
+                    <div class="noactivity">
+                        <img src="https://experience.sap.com/wp-content/uploads/sites/56/2021/03/Illustration-choice_Dont.png"
+                            alt=""><br>
+                    </div>
+                    <%}else{%>
+                        <div class="activity">
+                            <p class="recent_meet">Your Recent Meetings</p> <br>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Meeting Date <br>
+                                            <section>(YYYY-MM-DD)</section>
+                                        </th>
+                                        <th>Start time</th>
+                                        <th>End time</th>
+                                        <th> Room ID</th>
+                                        <th>Host</th>
+                                        <th>Person(s)</th>
+                                        <th>action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr>
+                                <td>Meeting 1</td>
+                                <td>Start time</td>
+                                <td>End time</td>
+                                <td>Room ID</td>
+                            </tr> -->
+                                    <% for(var i=0;i<meetings.length;i++){ %>
+                                        <tr>
+                                            <td>
+                                                <%= meetings[i].Date%>
+                                            </td>
+                                            <td>
+                                                <%=meetings[i].Start_time%>
+                                            </td>
+                                            <td>
+                                                <%=meetings[i].End_time%>
+                                            </td>
+                                            <td>
+                                                <%=meetings[i].Room_ID%>
+                                            </td>
+                                            <td>
+                                                <%=meetings[i].for_person%>
+                                            </td>
+                                            <td>
+                                                <%=meetings[i].person%>
+                                            </td>
+                                            <td>
+                                                <Button id="<%=i%>" class="first" style="display:block"
+                                                    onclick="toJoin(this.id)">Join</Button>
+                                                <form action="/schedule/<%=meetings[i].Room_ID%>" method="post"
+                                                    id="<%=i%>+200" class="form_enterperson" style="display:none">
+
+                                                    <label for="">Enter person: </label>
+                                                    <input type="text" name="person_tojoin" id="" placeholder="p1"> <br>
+
+                                                    <button type="submit" class="second">Join</button>
+                                                    <button type="button" class="second" id="<%=i%>+100"
+                                                        onclick="form_remove(this.id)">Cancel</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <%}%>
+                                </tbody>
+                            </table>
+                            <br><br>
+                        </div>
+                        <%}%>
+            </div>
+        </div>
+    </div>
+    <div class="satwik_Pal">
+        Done by Satwik pal
+    </div>
+    <script>
+        var bt = document.getElementById("schedule_meeting");
+        bt.addEventListener("click", () => {
+            var form = document.querySelector(".meetingform");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            }
+            else {
+                form.style.display = "none";
+            }
+        });
+
+        function toJoin(id_clicked) {
+            console.log(id_clicked + "+200");
+            document.getElementById(id_clicked).style.display = "none";
+            document.getElementById(id_clicked + "+200").style.display = "block";
+        }
+        function form_remove(id_clicked) {
+            var string_id = id_clicked.replace("+100", "");
+            id_clicked = Number(string_id);
+            document.getElementById(id_clicked).style.display = "block";
+            document.getElementById(string_id + "+200").style.display = "none";
+        }
+
+        window.setInterval("refresh()", 60000);
+        function refresh() {
+            window.location.reload();
+        }
+    </script>
+</body>
+
+</html>

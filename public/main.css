@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topbar h2{
+  background-color: #A760FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.content_box p{
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+.schedule_meeting{
+  position: relative;
+  /* margin-bottom: 1vw; */
+  top: 10%;
+  left: 4%;
+  padding: 2vh;
+  border: hidden;
+  border-radius: 5px;
+  width: 13vw;
+}
+.meetingform{
+  margin: 2vw;
+}
+.meetingform form{
+  width: 40vw;
+  border: 1px solid black;
+  padding: 2vw;
+  display: grid;
+  border-radius: 6px;
+  align-items: center;
+}
+.time{
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+} 
+.time div{
+  display: flex;
+}
+.joiner{
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+} 
+.joiner div{
+  display: flex;
+}
+option{
+  padding: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Alabel{
+  width: 50%;
+  margin-right:2%;
+}
+.input2{
+  margin-right: 0%;
+}
+input{
+  padding: 1vh;
+}
+select{
+  padding: 1vh;
+}
+.schedule{
+  margin-top: 2vw;
+  padding: 1.4vh;
+  background-color:#A760FF ;
+  border: none;
+  border-radius: 5px;
+}
+.noactivity img{
+  width: 30vw;
+  height: 30vw;
+}
+.noactivity{
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------------------ */
+.recent_meet{
+  font-size: large;
+
+}
+.activity{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60vw;
+  transform: translateX(32%);
+}
+.activity table {
+  width: 100%;
+  
+}
+.activity td, .activity th {
+  padding: 10px;
+}
+
+/* .activity td:first-child, .activity th:first-child {
+  padding-left: 10px;
+}
+
+.activity td:last-child, .activity th:last-child {
+  padding-right: 10px;
+} */
+
+.activity th {
+  border-bottom: 1px solid #ddd;
+}
+.activity td{
+  /* align-content: center !important; */
+  text-align: center;
+}
+.activity tr td:last-child .first{
+  margin: auto;
+  width: 100%;
+  padding: 1vh;
+}
+.activity tr td:last-child .second{
+  margin: auto;
+  margin-top: 1vh;
+  width: 30%;
+  justify-content: space-between;
+  padding: 1vh;
+}
+section{
+  font-size: smaller;
+  font-weight: 100;
+  color: gray;
+}
+
+.satwik_Pal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+
+
+
+

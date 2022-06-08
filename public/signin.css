@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topbar p{
+    background-color: #A760FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.main_content{
+    display: flex;
+    width: 100vw;
+    height: 89vh;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: -10vh;
+}
+.main_content p{
+    display: flex;
+    justify-content: center;
+    padding: 2vh;
+}
+form{
+    padding: 1vw;
+    width: 40vw;
+    display: grid;
+    align-items: center;
+    padding: 2vw;
+    border: 1px dotted black;
+}
+input{
+    padding: 1vh;
+}
+button{
+    padding: 1.4vh;
+    background-color: #CA82FF;
+    border: none;
+    border-radius: 6px;
+}
