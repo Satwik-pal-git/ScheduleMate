@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const db = process.env.DB;
+const db = "mongodb+srv://task_growthpal:MzchtM1QQkRcsmFB@cluster0.lw2jp.mongodb.net/?retryWrites=true&w=majority";
 
 const connectDB = async () => {
     try {
