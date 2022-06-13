@@ -9,12 +9,15 @@ https://drive.google.com/file/d/1gxVtRH3qoHYJBHdRye19plosDleRK-qQ/view?usp=shari
 <br/>
 
 <h4>To run the code(Usage)</h4><br>
+
 ```
-    npm install
-    npm run dev
+npm install
+npm run dev
 ```
-<br>
-<p> Then go to the browser and enter the following url</p>
+
+<br/>
+<p> Then go to the browser and enter the following url</p> <br/>
+
 ```
 http://localhost:8000/
 ```
