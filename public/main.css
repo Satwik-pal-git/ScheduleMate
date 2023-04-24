@@ -10,6 +10,13 @@
   align-items: center;
   height: 10vh;
 }
+.topbar h3{
+  background-color: #A760FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1vw;
+}
 
 .content_box p{
   margin-top: 2vh;
