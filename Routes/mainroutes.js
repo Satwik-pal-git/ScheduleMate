@@ -4,9 +4,10 @@ const Meeting_model = require("../Model/model");
 const mongoose = require("mongoose");
 const Meeting_controller = require("../Controller/person");
 const update_schedule = require("../Controller/delete_meets");
+const path = require("path");
 
 router.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(path.join(__dirname + "/../public/landing.html"));
 });
 
 router.post("/", (req, res) => {
