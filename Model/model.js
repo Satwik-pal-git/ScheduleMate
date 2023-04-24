@@ -19,7 +19,7 @@ const meeting = new mongoose.Schema({
     },
     for_person: {
         type: String,
-        required: [true, "the host should be presend for a meeting"]
+        required: [true, "the host should be present for a meeting"]
     },
     person: [{
         type: String
