@@ -7,7 +7,7 @@ const path = require("path");
 const body_parser = require("body-parser");
 const connectDB = require("./Mongo/mongo");
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname + "/public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
