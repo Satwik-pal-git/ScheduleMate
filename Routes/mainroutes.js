@@ -6,7 +6,7 @@ const Meeting_controller = require("../Controller/person");
 const update_schedule = require("../Controller/delete_meets");
 
 router.get("/", (req, res) => {
-    res.sendFile("../public/index.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 router.post("/", (req, res) => {
