@@ -1,7 +1,7 @@
 # Schedule_Management_System
 
 Link for the project:<br/>
-https://schedule--system.herokuapp.com/
+https://schedule-mate.vercel.app/
 <br/>
 
 
